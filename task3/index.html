@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Задание 3</title>
+    <script src="../jquery.js"></script>
+    <script src="littlebit.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="boxed">
+            <h1>Kohl Corp. Vacation planning</h1>
+            <ul id="right_part">
+                <li><a href="#">Hi, Matthew</a></li>
+                <li><a href="#">My info</a></li>
+                <li><a href="#">Help</a></li>
+                <li class="delimeter"></li>
+                <li><a href="#"><i class="logout_ico"></i> Logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="wrapper">
+    	<nav>
+        	<ul>
+            	<li class="active"><a href="#">Overview <i class="qty_ico">3</i></a></li>
+                <li><a href="#">Time Offs</a></li>
+                <li><a href="#">Purchases</a></li>
+                <li><a href="#">Employees</a></li>
+                <li class="pull_right"><a href="#"><i class="sett_ico"></i>Company settings</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <div id="cont_header">
+                <h1>Overview</h1>
+            </div>
+            <div id="content_box">
+        		
+                <div class="msg">
+                	<div class="pic_holder">
+                    	<img src="images/ava1.jpg" />
+                    </div>
+                    <a class="name">Christina Frerichs</a>
+                    <span class="muted">asks for time off.</span>
+                    <span class="date"><i class="calendar_ico"></i> May 15 - 20,</span>
+                    <span class="topic">5 days. Sickness</span>
+                    <b class="status pending">Pending</b>
+                    
+                    <div class="msg_body">
+                    	<i class="up_arrow"></i>
+                        <div class="text_block">
+                            <span class="msg_text">I need some rest -</span>
+                            <a href="#" class="who">Shona L. Brown</a>
+                            <span class="when">1 hour ago</span>
+                        </div>
+                        <a href="#" class="answer"><i class="comment_ico"></i> Answer</a>
+                    </div>
+                    
+                    <div class="person">
+                    	<span class="person_name"></span>
+                        <span class="prof">manager</span>
+                        <ul class="days">
+                            <li>10 days left</li>
+                            <li>13 days pending</li>
+                            <li>3 days lrejected</li>
+                        </ul>
+                        <div class="some">3/5</div>
+                        <br />
+                        <ul class="links">
+                            <li><a href="#">last activity 12 days ago</a></li>
+                            <li><a href="#">users time off</a></li>
+                            <li><a href="#">todo list</a></li>
+                        </ul>
+                    </div>
+                                    
+                </div> <!-- msg -->
+                
+                <div class="msg borderless">
+                	<div class="pic_holder">
+                    	<img src="images/ava2.jpg" />
+                    </div>
+                    <a class="name">Daniele Longo</a>
+                    <span class="muted">asks for time off.</span>
+                    <span class="date"><i class="calendar_ico"></i> May 10 - 17,</span>
+                    <span class="topic">5 days. Holiday</span>
+                    <b class="status pending">Pending</b>
+                    
+                    <div class="msg_body">
+                    	<i class="up_arrow"></i>
+                        <div class="text_block">
+                            <span class="msg_text">I need some rest -</span>
+                            <a href="#" class="who">Shona L. Brown</a>
+                            <span class="when">1 hour ago</span>
+                        </div>
+                        <a href="#" class="answer"><i class="comment_ico"></i> Answer</a>
+                    </div>
+                    
+                    <div class="person">
+                    	<a href="#" class="person_name"></a>
+                        <span class="prof">designer</span>
+                        <ul class="days">
+                            <li>10 days left</li>
+                            <li>13 days pending</li>
+                            <li>3 days lrejected</li>
+                        </ul>
+                        <div class="some">2/5</div>
+                        <br />
+                        <ul class="links">
+                            <li><a href="#">last activity 12 days ago</a></li>
+                            <li><a href="#">users time off</a></li>
+                            <li><a href="#">todo list</a></li>
+                        </ul>
+                    </div>
+                                    
+                </div> <!-- msg -->
+                
+                <h2>Active stories</h2>
+                
+                <div class="msg">
+                	<div class="pic_holder">
+                    	<img src="images/ava1.jpg" />
+                    </div>
+                    <a class="name">Christina Frerichs</a>
+                    <span class="muted">asks for new purchase.</span>
+                    <!--<span class="date"><i class="calendar_ico"></i> </span>-->
+                    <span class="topic">Notebook, &pound;1,000</span>
+                    <b class="status bought">Bought</b>
+                    
+                    <div class="msg_body flex">
+                    	<i class="up_arrow"></i>
+                        <ul>
+	                        <li>
+                                <span class="msg_text">Done -</span>
+                                <a href="#" class="who">Shona L. Brown</a>
+                                <span class="when">1 hour ago</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="comments">3 comments</a>
+                    </div>
+                    
+                    <div class="person">
+                    	<span class="person_name"></span>
+                        <span class="prof">teacher</span>
+                        <ul class="days">
+                            <li>10 days left</li>
+                            <li>13 days pending</li>
+                            <li>3 days lrejected</li>
+                        </ul>
+                        <div class="some">4/5</div>
+                        <br />
+                        <ul class="links">
+                            <li><a href="#">last activity 12 days ago</a></li>
+                            <li><a href="#">users time off</a></li>
+                            <li><a href="#">todo list</a></li>
+                        </ul>
+                    </div>
+                    
+                </div> <!-- msg -->
+                
+                <div class="msg">
+                	<div class="pic_holder">
+                    	<img src="images/ava3.jpg" />
+                    </div>
+                    <a class="name">Harold Henriquez</a>
+                    <span class="muted">asks for new purchase.</span>
+                    <!--<span class="date"><i class="calendar_ico"></i> </span>-->
+                    <span class="topic">Notebook, &pound;1,000</span>
+                    <b class="status bought">Bought</b>
+                    
+                    <div class="msg_body flex">
+                    	<i class="up_arrow"></i>
+                        <ul>
+	                        <li>
+                                <span class="msg_text">I want a new laptop -</span>
+                                <a href="#" class="who">Harold Henriquez</a>
+                            </li>
+	                        <li>
+                                <span class="msg_text">No problem -</span>
+                                <a href="#" class="who">D. Bruce Sewell</a>
+                            </li>
+	                        <li>
+                                <span class="msg_text">Done</span>
+                                <a href="#" class="who">Shona L. Brown</a>
+                                <span class="when">35 min ago</span>
+                            </li>                                                        
+                        </ul>
+                        
+                        <a href="#" class="comments">Hide</a>
+                    </div>
+                    
+                    <div class="person">
+                    	<span class="person_name"></span>
+                        <span class="prof">doctor</span>
+                        <ul class="days">
+                            <li>10 days left</li>
+                            <li>13 days pending</li>
+                            <li>3 days lrejected</li>
+                        </ul>
+                        <div class="some">5/5</div>
+                        <br />
+                        <ul class="links">
+                            <li><a href="#">last activity 12 days ago</a></li>
+                            <li><a href="#">users time off</a></li>
+                            <li><a href="#">todo list</a></li>
+                        </ul>
+                    </div>
+                    
+                </div> <!-- msg -->
+                
+                <div class="msg">
+                	<div class="pic_holder">
+                    	<img src="images/ava3.jpg" />
+                    </div>
+                    <a class="name">Harold Henriquez</a>
+                    <span class="muted">asks for new purchase.</span>
+                    <!--<span class="date"><i class="calendar_ico"></i> </span>-->
+                    <span class="topic">Notebook Asus EEE PC, &pound;1,000</span>
+                    <b class="status approved">Approved</b>
+                    
+                    <div class="msg_body flex">
+                    	<i class="up_arrow"></i>
+                        <ul>
+	                        <li>
+                                <span class="msg_text">I want a new laptop -</span>
+                                <a href="#" class="who">Harold Henriquez</a>
+                            </li>
+	                        <li>
+                                <span class="msg_text">No problem -</span>
+                                <a href="#" class="who">D. Bruce Sewell</a>
+                                <span class="when">1 hour ago <i class="pencil_ico"></i></span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#" class="comments">Hide</a>
+                    </div>
+                    
+                    <div class="person">
+                    	<span class="person_name"></span>
+                        <span class="prof">doctor</span>
+                        <ul class="days">
+                            <li>10 days left</li>
+                            <li>13 days pending</li>
+                            <li>3 days lrejected</li>
+                        </ul>
+                        <div class="some">0/5</div>
+                        <br />
+                        <ul class="links">
+                            <li><a href="#">last activity 12 days ago</a></li>
+                            <li><a href="#">users time off</a></li>
+                            <li><a href="#">todo list</a></li>
+                        </ul>
+                    </div>
+                    
+                </div> <!-- msg -->
+                
+                <div class="msg borderless">
+                	<div class="pic_holder">
+                    	<img src="images/ava4.jpg" />
+                    </div>
+                    <a class="name">Daniele Longo</a>
+                    <span class="muted">asks for new purchase.</span>
+                    <!--<span class="date"><i class="calendar_ico"></i> </span>-->
+                    <span class="topic">Notebook, &pound;1,000</span>
+                    <b class="status approved">Approved</b>
+                    
+                    <div class="msg_body flex">
+                    	<i class="up_arrow"></i>
+                        <ul>
+	                        <li>
+                                <span class="msg_text">I want a new laptop -</span>
+                                <a href="#" class="who">Harold Henriquez</a>
+                            </li>
+	                        <li>
+                                <span class="msg_text">Ok. I don't mind -</span>
+                                <a href="#" class="who">D. Bruce Sewell</a>
+                                <span class="when">1 min ago <i class="pencil_ico"></i></span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#" class="comments">Hide</a>
+                    </div>
+                    
+                    <div class="person">
+                    	<span class="person_name"></span>
+                        <span class="prof">manager</span>
+                        <ul class="days">
+                            <li>10 days left</li>
+                            <li>13 days pending</li>
+                            <li>3 days lrejected</li>
+                        </ul>
+                        <div class="some">5/6</div>
+                        <br />
+                        <ul class="links">
+                            <li><a href="#">last activity 12 days ago</a></li>
+                            <li><a href="#">users time off</a></li>
+                            <li><a href="#">todo list</a></li>
+                        </ul>
+                    </div>
+                    
+                </div> <!-- msg -->
+                
+            </div> <!-- content_box -->
+        </div><!-- content -->
+                   
+    </div> <!-- wrapper -->
+</body>
+</html>
