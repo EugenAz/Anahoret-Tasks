@@ -1,15 +1,7 @@
 $(function(){
-	// 2 этапа
-	// 1. Строим массив упорядоченных индексов блоков по порядку их появления на странице(слева направо постепенно опускаясь по рядам)
-	// 2. Используя массив выводим элементы по сетке.
-	
 
 	var boxWidth = 216;
 	var dblBoxWidth = 442;
-
-	var blocksQty = $(".infobox").length;
-	var bigBlocksQty = $(".big").length;
-	blocksQty = blocksQty - bigBlocksQty;
 	
 	var curCol = 1;
 	var colOneLeft = 0;
@@ -18,21 +10,6 @@ $(function(){
 	var colOneTop = 0;
 	var colTwoTop = 0;
 	var colThreeTop = 0;
-	
-	var boxesOrder = new Array;
-	// 1
-	var i = 0;
-	$(".big").each(function(){		
-		boxesOrder[i*3] = $(".infobox").index(this);
-		i++;
-	});
-	
-	$(".infobox").each(function(){
-		if($(this).hasClass("big"))	return;
-		
-	});
-	
-	// 2
 	
 	$(".infobox").each(function(){
 		//alert($(this).outerWidth());
