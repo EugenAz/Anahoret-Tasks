@@ -95,10 +95,11 @@ select, input{
 }
 
 .main_part{
+	position: relative;
 	width: 680px !important;
-	float: left !important;
-	margin: 0 0 0 10% !important;
-	background: orange;
+    /*width: 100%;*/
+	margin: 0 100px 0 0 !important;
+	float: right !important;
 }
 
 .main_part .infobox{
@@ -108,12 +109,10 @@ select, input{
 	border: 1px solid #e1e1e1;
 	max-width: 194px !important;
 	min-width: 194px !important;
-	margin-bottom: 5%;
-	float: left;
 }
 .main_part .big{
-	max-width: 398px !important;
-	min-width: 398px !important;
+	/*max-width: 398px !important;*/
+	min-width: 420px !important;
 }
 .main_part .yellow{
 	background-color: #fef5ca;
@@ -175,8 +174,6 @@ select, input{
 .main_part .yellow .infobox_footer p{
 	color: #a09d8e;
 }
-
-/* Set the fixed height of the footer here */
 
 footer {
 	height: 60px;
