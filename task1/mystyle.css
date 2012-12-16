@@ -96,8 +96,9 @@ select, input{
 
 .main_part{
 	width: 680px !important;
-	float: left !important;
-	margin: 0 0 0 10% !important;
+	/*width: 100%;*/
+	float: right !important;
+	margin: 0 100px 0 0 !important;
 }
 
 .main_part .infobox{
@@ -174,8 +175,6 @@ select, input{
 .main_part .yellow .infobox_footer p{
 	color: #a09d8e;
 }
-
-/* Set the fixed height of the footer here */
 
 footer {
 	height: 60px;
