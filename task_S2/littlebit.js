@@ -1,5 +1,6 @@
 $(function(){
 	var boxWidth = 216;
+	
 	var curCol = 1;
 	var colOneLeft = 0;
 	var colTwoLeft = boxWidth+10;
@@ -18,8 +19,8 @@ $(function(){
 	var boxesOrder = new Array;
 	var i = 0;
 	$(".big").each(function(){		
-		boxesOrder[i*3] = [$(".infobox").index(this),'b'];
-		boxesOrder[i*3+1] = ['b'];
+		boxesOrder[i*3] = $(".infobox").index(this);
+		boxesOrder[i*3+1] = 'b';
 		i++;
 	});
 	
@@ -27,7 +28,7 @@ $(function(){
 		if($(this).hasClass("big"))	return;
 		for(var i=0;;i++){
 			if(boxesOrder[i] == null){
-				boxesOrder[i] = [$(".infobox").index(this),'s'];
+				boxesOrder[i] = $(".infobox").index(this);
 				break;
 			}
 			else{
@@ -38,15 +39,15 @@ $(function(){
 	// 2
 	var heightLimit = 150;
 	$.each( boxesOrder, function(i, obj){
-		if(obj[0] != 'b'){
+		if(obj != 'b'){
 			
-			thisObj = $(".infobox").eq(obj[0]);
+			thisObj = $(".infobox").eq(obj);
 			var curHeight = thisObj.outerHeight();
 			if(curCol == 1){
 				thisObj.css("left", colOneLeft + "px");
 				thisObj.css("top", colOneTop + "px");
 				colOneTop += curHeight + 10;
-				if(boxesOrder[i+1][0] != 'b'){
+				if(boxesOrder[i+1] != 'b'){
 					curCol = 2;
 				}
 				else{
