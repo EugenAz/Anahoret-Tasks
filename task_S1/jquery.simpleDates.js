@@ -1,21 +1,5 @@
 (function($){
 	jQuery.fn.simpleDates = function(){
-		function monthName(monthNum){
-			var month=new Array();
-			month[0]="January";
-			month[1]="February";
-			month[2]="March";
-			month[3]="April";
-			month[4]="May";
-			month[5]="June";
-			month[6]="July";
-			month[7]="August";
-			month[8]="September";
-			month[9]="October";
-			month[10]="November";
-			month[11]="December";
-			return month[monthNum]; 	
-		}
 		function timeBetween(diff){
 			var between = '';
 			uMin = 60;
@@ -47,6 +31,22 @@
 			}
 			return between;
 		}
+		
+		var monthName = [
+		  "January", 
+		  "February", 
+		  "March", 
+		  "April", 
+		  "May", 
+		  "June", 
+		  "July", 
+		  "August", 
+		  "September", 
+		  "October", 
+		  "November", 
+		  "December"
+		];
+		
 		return this.each(function(){
 			isoDates = $(this).attr('data-interval');
 			isoDates = isoDates.split(',');
@@ -82,21 +82,21 @@
 				var lastDate = dates[datesQty-1];
 				var curYear = new Date().getFullYear();
 				if(firstDate[0] != lastDate[0]){
-					response = monthName(firstDate[1])+" "+firstDate[2]+" "+firstDate[0]+" - "+monthName(lastDate[1])+" "+lastDate[2]+" "+lastDate[0];
+					response = monthName[firstDate[1]]+" "+firstDate[2]+" "+firstDate[0]+" - "+monthName[lastDate[1]]+" "+lastDate[2]+" "+lastDate[0];
 				}
 				else{
 					if(firstDate[1] != lastDate[1]){
-						response = monthName(firstDate[1])+" "+firstDate[2];
+						response = monthName[firstDate[1]]+" "+firstDate[2];
 						response += " - ";
-						response += monthName(lastDate[1])+" "+lastDate[2]+((firstDate[0] != curYear)?" "+firstDate[0]:'');
+						response += monthName[lastDate[1]]+" "+lastDate[2]+((firstDate[0] != curYear)?" "+firstDate[0]:'');
 					}
 					else{
 						if(firstDate[2] == lastDate[2]){
-							response = monthName(firstDate[1])+" "+firstDate[2];
+							response = monthName[firstDate[1]]+" "+firstDate[2];
 							response += ((firstDate[0] != curYear)?" "+firstDate[0]:'');					
 						}
 						else{
-							response = monthName(firstDate[1])+" "+firstDate[2];
+							response = monthName[firstDate[1]]+" "+firstDate[2];
 							response += " - ";
 							response += lastDate[2]+((firstDate[0] != curYear)?" "+firstDate[0]:'');
 						}
