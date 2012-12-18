@@ -10,6 +10,7 @@
 			var ttID;
 			var classID;
 			jQuery(this).mouseover(function(e){
+				jQuery(".tooltip_box").remove();
 				ttID = "id"+Math.floor((Math.random()*10000)+1);
 				classID = '.'+ttID;
 				var arrClass = "arr_up";
