@@ -5,9 +5,6 @@
       uMin = 60;
       uHour = 3600;
       uDay = 86400;
-      /*uWeek = 604800;
-      uMonth = 2592000;
-      uYear = 31536000;*/
       if(diff < uMin){
         between = diff + ' seconds';
       }
@@ -20,15 +17,6 @@
       else{
         between = Math.round(diff/uDay) + ' day(s)';
       }
-      /*else if(diff < uMonth){
-        between = Math.round(diff/uWeek) + ' week(s)';
-      }
-      else if(diff < uYear){
-        between = Math.round(diff/uMonth) + ' month(s)';
-      }
-      else{
-        between = Math.round(diff/uYear) + ' year(s)';
-      }*/
       return between;
     }
     
