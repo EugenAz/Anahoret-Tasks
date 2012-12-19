@@ -2,9 +2,9 @@
   jQuery.fn.simpleDates = function(){
     function timeBetween(diff){
       var between = '';
-      uMin = 60;
-      uHour = 3600;
-      uDay = 86400;
+      var uMin = 60;
+      var uHour = 3600;
+      var uDay = 86400;
       if(diff < uMin){
         between = diff + ' seconds';
       }
@@ -36,9 +36,9 @@
     ];
     
     return this.each(function(){
-      isoDates = $(this).attr('data-interval');
+      var isoDates = $(this).attr('data-interval');
       isoDates = isoDates.split(',');
-      datesQty = isoDates.length;
+      var datesQty = isoDates.length;
       var response = '';
       var dates = new Array();
       var datetime = '';
@@ -58,7 +58,7 @@
         timestamp = Math.round((new Date(year,month,day,hour,minute)).getTime() / 1000);
         dates[i] = [year, month, day, hour, minute, timestamp];
       }
-      dataReady = true;
+      var dataReady = true;
       for(var i=0; i<datesQty-1; i++){
         if(dates[i][5] > dates[i+1][5]){
           response = 'Ошибка данных.';
@@ -99,3 +99,4 @@
     });
   };
 })(jQuery);
+
