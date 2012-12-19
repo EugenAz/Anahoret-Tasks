@@ -36,27 +36,15 @@
     ];
     
     return this.each(function(){
-      var isoDates = $(this).attr('data-interval');
-      isoDates = isoDates.split(',');
+      var isoDates = $(this).attr('data-interval').split(',');
       var datesQty = isoDates.length;
       var response = '';
       var dates = new Array();
-      var datetime = '';
       var timestamp = 0;
       for(var i=0; i<datesQty; i++){
-        datetime = isoDates[i].split('T');
-        date = datetime[0];
-        date = date.split('-');
-        year = date[0];
-        month = date[1]-1;
-        day = date[2];
-        time = datetime[1];
-        time = time.slice(0, -1);
-        time = time.split(':');
-        hour = time[0];
-        minute = time[1];
-        timestamp = Math.round((new Date(year,month,day,hour,minute)).getTime() / 1000);
-        dates[i] = [year, month, day, hour, minute, timestamp];
+  	    var curDate = new Date(isoDates[i]);
+        timestamp = Math.round((curDate).getTime() / 1000);
+        dates[i] = [curDate.getFullYear(), curDate.getMonth(), curDate.getDate(), curDate.getHours(), curDate.getMinutes(), timestamp];
       }
       var dataReady = true;
       for(var i=0; i<datesQty-1; i++){
@@ -99,4 +87,3 @@
     });
   };
 })(jQuery);
-
