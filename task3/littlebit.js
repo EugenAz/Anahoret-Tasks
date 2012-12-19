@@ -13,6 +13,7 @@ $(function(){
     closeP.mouseover(function(){
       $(".msg:eq(" + msgIndex + ") .person").hide();
       $(this).width(0).height(0);
+      closeP.remove();
     });
     var name = $(".msg:eq(" + msgIndex + ") .name");
     var nameText = name.html();
