@@ -28,7 +28,7 @@ $(function(){
       return;
 	}
     for(var i=0;;i++){
-      if(boxesOrder[i] === null){
+      if(boxesOrder[i] == null){
         boxesOrder[i] = $(".infobox").index(this);
         break;
       }
