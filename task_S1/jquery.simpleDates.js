@@ -42,15 +42,15 @@
       var dates = new Array();
       var timestamp = 0;
       for(var i=0; i<datesQty; i++){
-  	var curDate = new Date(isoDates[i]);
+        var curDate = new Date(isoDates[i]);
         dates[i] = {
-		  year: curDate.getFullYear(),
-		  month: curDate.getMonth(),
-		  day: curDate.getDate(),
-		  hour: curDate.getHours(),
-		  minute: curDate.getMinutes(),
-		  timestamp: Math.round((curDate).getTime() / 1000)
-		};
+          year: curDate.getFullYear(),
+          month: curDate.getMonth(),
+          day: curDate.getDate(),
+          hour: curDate.getHours(),
+          minute: curDate.getMinutes(),
+          timestamp: Math.round((curDate).getTime() / 1000)
+        };
       }
       var dataReady = true;
       for(var i=0; i<datesQty-1; i++){
