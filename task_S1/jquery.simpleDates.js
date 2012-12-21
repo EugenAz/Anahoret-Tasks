@@ -42,13 +42,19 @@
       var dates = new Array();
       var timestamp = 0;
       for(var i=0; i<datesQty; i++){
-  	    var curDate = new Date(isoDates[i]);
-        timestamp = Math.round((curDate).getTime() / 1000);
-        dates[i] = [curDate.getFullYear(), curDate.getMonth(), curDate.getDate(), curDate.getHours(), curDate.getMinutes(), timestamp];
+  	var curDate = new Date(isoDates[i]);
+        dates[i] = {
+		  year: curDate.getFullYear(),
+		  month: curDate.getMonth(),
+		  day: curDate.getDate(),
+		  hour: curDate.getHours(),
+		  minute: curDate.getMinutes(),
+		  timestamp: Math.round((curDate).getTime() / 1000)
+		};
       }
       var dataReady = true;
       for(var i=0; i<datesQty-1; i++){
-        if(dates[i][5] > dates[i+1][5]){
+        if(dates[i].timestamp > dates[i+1].timestamp){
           response = 'Ошибка данных.';
           dataReady = false;
         }
@@ -57,29 +63,30 @@
         var firstDate = dates[0];
         var lastDate = dates[datesQty-1];
         var curYear = new Date().getFullYear();
-        if(firstDate[0] != lastDate[0]){
-          response = monthName[firstDate[1]]+" "+firstDate[2]+" "+firstDate[0]+" - "+monthName[lastDate[1]]+" "+lastDate[2]+" "+lastDate[0];
+        if(firstDate.year != lastDate.year){
+			
+          response = monthName[firstDate.month]+" "+firstDate.day+" "+firstDate.year+" - "+monthName[lastDate.month]+" "+lastDate.day+" "+lastDate.year;
         }
         else{
-          if(firstDate[1] != lastDate[1]){
-            response = monthName[firstDate[1]]+" "+firstDate[2];
+          if(firstDate.month != lastDate.month){
+            response = monthName[firstDate.month]+" "+firstDate.day;
             response += " - ";
-            response += monthName[lastDate[1]]+" "+lastDate[2]+((firstDate[0] != curYear)?" "+firstDate[0]:'');
+            response += monthName[lastDate.month]+" "+lastDate.day+((firstDate.year != curYear)?" "+firstDate.year:'');
           }
           else{
-            if(firstDate[2] == lastDate[2]){
-              response = monthName[firstDate[1]]+" "+firstDate[2];
-              response += ((firstDate[0] != curYear)?" "+firstDate[0]:'');          
+            if(firstDate.day == lastDate.day){
+              response = monthName[firstDate.month]+" "+firstDate.day;
+              response += ((firstDate.year != curYear)?" "+firstDate.year:'');          
             }
             else{
-              response = monthName[firstDate[1]]+" "+firstDate[2];
+              response = monthName[firstDate.month]+" "+firstDate.day;
               response += " - ";
-              response += lastDate[2]+((firstDate[0] != curYear)?" "+firstDate[0]:'');
+              response += lastDate.day+((firstDate.year != curYear)?" "+firstDate.year:'');
             }
           }
         }
         var between = '';
-        var diff = lastDate[5] - firstDate[5];
+        var diff = lastDate.timestamp - firstDate.timestamp;
         between = timeBetween(diff);
         response += ", "+between;
       }
