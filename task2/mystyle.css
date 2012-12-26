@@ -111,7 +111,7 @@ aside ul li.active a{
   top: -25px; left: 720px;
   width: 49px; height: 100%;
   z-index: 100;
-  background: url(images/line.jpg) repeat-y;
+  background: url(images/line.png) repeat-y;
 }
 #redlabel{
   position: absolute;
